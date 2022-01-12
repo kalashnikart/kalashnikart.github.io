@@ -2,8 +2,8 @@
 
 https://kalashnikartem.github.io
 
-![img](https://hiukim.github.io/mind-ar-js-doc/assets/images/card-06cb9111a8e32627db6bfafc7aa22a4d.png)
-https://hiukim.github.io/mind-ar-js-doc/assets/images/card-06cb9111a8e32627db6bfafc7aa22a4d.png
+![img](https://stemkoski.github.io/AR-Examples/markers/hiro.png)
+https://stemkoski.github.io/AR-Examples/markers/hiro.png
 
 ```
 npm run dev
