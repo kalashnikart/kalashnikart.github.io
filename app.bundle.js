@@ -110,7 +110,8 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 // @ts-ignore
 const mindarThree = new window.MINDAR.IMAGE.MindARThree({
     container: document.querySelector('#root'),
-    imageTargetSrc: 'https://cdn.jsdelivr.net/npm/mind-ar@1.1.0/examples/image-tracking/assets/card-example/card.mind'
+    // https://hiukim.github.io/mind-ar-js-doc/tools/compile/
+    imageTargetSrc: '/hiro_1.mind'
 });
 const anchor = mindarThree.addAnchor(0);
 const mesh = new three__WEBPACK_IMPORTED_MODULE_2__.Mesh(new three__WEBPACK_IMPORTED_MODULE_2__.BoxGeometry(1, 1, 1, 1), new three__WEBPACK_IMPORTED_MODULE_2__.MeshNormalMaterial());
