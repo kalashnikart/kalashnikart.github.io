@@ -1,0 +1,65 @@
+/*! !!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style.sass */
+
+/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
+
+/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */
+
+/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */
+
+/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */
+
+/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */
+
+/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */
+
+/*! ../node_modules/css-loader/dist/runtime/api.js */
+
+/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */
+
+/*! ./mindar */
+
+/*! ./qr */
+
+/*! ./style.sass */
+
+/*! ./three2unity */
+
+/*! ./unity */
+
+/*! ./utils */
+
+/*! qr-scanner */
+
+/*! rxjs */
+
+/*!*******************!*\
+  !*** ./src/qr.ts ***!
+  \*******************/
+
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+
+/*!**********************!*\
+  !*** ./src/unity.ts ***!
+  \**********************/
+
+/*!**********************!*\
+  !*** ./src/utils.ts ***!
+  \**********************/
+
+/*!***********************!*\
+  !*** ./src/mindar.ts ***!
+  \***********************/
+
+/*!************************!*\
+  !*** ./src/style.sass ***!
+  \************************/
+
+/*!****************************!*\
+  !*** ./src/three2unity.ts ***!
+  \****************************/
+
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.sass ***!
+  \*****************************************************************************************************/
