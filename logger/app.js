@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background: #040d21;\n  margin: 0;\n  color: #627597;\n  height: 100vh;\n  display: flex;\n}\n\n#root {\n  margin: auto;\n  width: min(80vw, 80vh);\n  height: min(80vw, 80vh);\n}\n\ntextarea {\n  width: 100%;\n  height: 100px;\n}\n\ninput[type=button] {\n  font-size: 1.2rem;\n  color: #040d21;\n  background: #627597;\n  border-color: #627597;\n  margin-top: 1rem;\n}", "",{"version":3,"sources":["webpack://./src/style.sass"],"names":[],"mappings":"AAGA;EACE,mBAHS;EAIT,SAAA;EACA,cANU;EAOV,aAAA;EACA,aAAA;AAFF;;AAIA;EACE,YAAA;EACA,sBAAA;EACA,uBAAA;AADF;;AAIA;EACE,WAAA;EACA,aAAA;AADF;;AAGA;EACE,iBAAA;EACA,cArBS;EAsBT,mBAvBU;EAwBV,qBAxBU;EAyBV,gBAAA;AAAF","sourcesContent":["$lightblue: #627597\n$darkblue: #040d21\n\nbody\n  background: $darkblue\n  margin: 0\n  color: $lightblue\n  height: 100vh\n  display: flex\n\n#root\n  margin: auto\n  width: min(80vw, 80vh)\n  height: min(80vw, 80vh)\n\n\ntextarea\n  width: 100%\n  height: 100px\n\ninput[type=button]\n  font-size: 1.2rem\n  color: $darkblue\n  background: $lightblue\n  border-color: $lightblue\n  margin-top: 1rem"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background: #040d21;\n  margin: 0;\n  color: #627597;\n  height: 100vh;\n  display: flex;\n}\n\n#root {\n  margin: auto;\n  width: min(80vw, 80vh);\n  height: min(80vw, 80vh);\n}\n\ntextarea {\n  width: 100%;\n  height: 100px;\n}\n\ninput {\n  font-size: 1.2rem;\n  color: #040d21;\n  background: #627597;\n  border-color: #627597;\n  margin-top: 1rem;\n}", "",{"version":3,"sources":["webpack://./src/style.sass"],"names":[],"mappings":"AAGA;EACE,mBAHS;EAIT,SAAA;EACA,cANU;EAOV,aAAA;EACA,aAAA;AAFF;;AAIA;EACE,YAAA;EACA,sBAAA;EACA,uBAAA;AADF;;AAGA;EACE,WAAA;EACA,aAAA;AAAF;;AAEA;EACE,iBAAA;EACA,cApBS;EAqBT,mBAtBU;EAuBV,qBAvBU;EAwBV,gBAAA;AACF","sourcesContent":["$lightblue: #627597\n$darkblue: #040d21\n\nbody\n  background: $darkblue\n  margin: 0\n  color: $lightblue\n  height: 100vh\n  display: flex\n\n#root\n  margin: auto\n  width: min(80vw, 80vh)\n  height: min(80vw, 80vh)\n\ntextarea\n  width: 100%\n  height: 100px\n\ninput\n  font-size: 1.2rem\n  color: $darkblue\n  background: $lightblue\n  border-color: $lightblue\n  margin-top: 1rem"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31587,25 +31587,20 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/aframe/ascene.tsx":
-/*!*******************************!*\
-  !*** ./src/aframe/ascene.tsx ***!
-  \*******************************/
+/***/ "./src/ascene-template.ts":
+/*!********************************!*\
+  !*** ./src/ascene-template.ts ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "template": () => (/* binding */ template)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-// import './components';
-
 const assets = {
     target: 'https://cdn.glitch.global/78c65e45-83d9-4827-b861-b3709f7b2e7c/lush.glb?v=1649681515587',
 };
-const template = (data) => {
+const template = (camera) => {
     return `
   <a-scene vr-mode-ui='enabled: false' renderer='antialias: false'
     loading-screen='dotsColor: white; backgroundColor: black'>
@@ -31620,26 +31615,66 @@ const template = (data) => {
     <a-entity id='heatmap'>
       <a-entity id='target' gltf-model='#target_model' position='0 0 0' transparent='true' scale='10 10 10'></a-entity>
     </a-entity>
-    ${data}
+    ${camera}
   </a-scene>`;
 };
-const Form = ({ submit }) => {
+
+
+/***/ }),
+
+/***/ "./src/ascene.tsx":
+/*!************************!*\
+  !*** ./src/ascene.tsx ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ascene_template__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ascene-template */ "./src/ascene-template.ts");
+/* harmony import */ var _setup_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./setup-form */ "./src/setup-form.tsx");
+
+
+
+
+const HeatMapScene = () => {
+    const [state, setState] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
+    return (!state ?
+        (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_setup_form__WEBPACK_IMPORTED_MODULE_3__.SetupForm, { submit: setState }) :
+        (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { dangerouslySetInnerHTML: { __html: (0,_ascene_template__WEBPACK_IMPORTED_MODULE_2__.template)(state) } }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeatMapScene);
+
+
+/***/ }),
+
+/***/ "./src/setup-form.tsx":
+/*!****************************!*\
+  !*** ./src/setup-form.tsx ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SetupForm": () => (/* binding */ SetupForm)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const SetupForm = ({ submit }) => {
     const [data, setData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
-    const handle = () => {
+    const handle = (e) => {
+        e.preventDefault();
         if (!data)
             return;
         submit(data);
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", Object.assign({ htmlFor: "data" }, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", { children: "AFrame Component Code Snippet:" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("textarea", { placeholder: '<a-camera metalitix-logger="appkey: f4600789-38e7-4d16-a7c4-26a47fc7de7a"></a-camera>', name: "data", value: data, onChange: (e) => setData(e.target.value) })] })) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { type: "button", value: "run demo", onClick: handle }) })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("form", Object.assign({ onSubmit: handle }, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", Object.assign({ htmlFor: "data" }, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h2", { children: "AFrame Component Code Snippet:" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("textarea", { placeholder: '<a-camera metalitix-logger="appkey: f4600789-38e7-4d16-a7c4-26a47fc7de7a"></a-camera>', name: "data", value: data, onChange: (e) => setData(e.target.value) })] })) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { type: "submit", value: "run demo" }) })] })) }));
 };
-const HeatMapScene = () => {
-    const [state, setState] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
-    // console.log(template(state));
-    return (!state ?
-        (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Form, { submit: setState }) :
-        (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { dangerouslySetInnerHTML: { __html: template(state) } }));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeatMapScene);
 
 
 /***/ })
@@ -31722,12 +31757,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _style_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.sass */ "./src/style.sass");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _aframe_ascene__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./aframe/ascene */ "./src/aframe/ascene.tsx");
+/* harmony import */ var _ascene__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ascene */ "./src/ascene.tsx");
 
 
+// import './aframe';
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_2__.render((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_aframe_ascene__WEBPACK_IMPORTED_MODULE_3__["default"], {}), document.getElementById('root'));
+react_dom__WEBPACK_IMPORTED_MODULE_2__.render((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_ascene__WEBPACK_IMPORTED_MODULE_3__["default"], {}), document.getElementById('root'));
 
 })();
 
