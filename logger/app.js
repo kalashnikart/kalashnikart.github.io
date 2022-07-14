@@ -31598,7 +31598,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "template": () => (/* binding */ template)
 /* harmony export */ });
 const assets = {
-    target: 'https://cdn.glitch.global/78c65e45-83d9-4827-b861-b3709f7b2e7c/lush.glb?v=1649681515587',
+    target: 'https://cdn.glitch.global/2a5a23ff-5273-480c-aea1-6ace2b583cf5/scene.gltf?v=1657796903100',
 };
 const template = (camera) => {
     return `
